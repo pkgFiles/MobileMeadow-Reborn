@@ -6,4 +6,7 @@ Description: Turn your phone into a meadow. Add flowers to your apps. Let birds 
 Maintainer: pkgFiles
 Author: pkgFiles
 Section: Tweaks
-Depends: ${ORION}, firmware (>= 14.0)
+Depends: dev.theos.orion14, firmware (>= 14.0)
+SileoDepiction: https://pkgfiles.github.io/sileodepictions/com.pkgfiles.mobilemeadowreborn/depiction.json
+Depiction: https://pkgfiles.github.io/depictions/?p=com.pkgfiles.mobilemeadowreborn
+Icon: https://raw.githubusercontent.com/pkgFiles/pkgfiles.github.io/main/assets/TweakIcons/MobileMeadowReborn.png

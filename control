@@ -1,0 +1,9 @@
+Package: com.pkgfiles.mobilemeadowreborn
+Name: MobileMeadow Reborn
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Turn your phone into a meadow. Add flowers to your apps. Let birds fly on your screen.
+Maintainer: pkgFiles
+Author: pkgFiles
+Section: Tweaks
+Depends: ${ORION}, firmware (>= 14.0)

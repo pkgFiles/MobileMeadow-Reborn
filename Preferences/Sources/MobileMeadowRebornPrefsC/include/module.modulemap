@@ -1,0 +1,4 @@
+module MobileMeadowRebornPrefsC {
+    umbrella "."
+    export *
+}

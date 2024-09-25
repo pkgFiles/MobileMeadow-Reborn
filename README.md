@@ -1,5 +1,5 @@
 # MobileMeadow Reborn
-MobileMeadow Reborn is the successor of the original MobileMeadow tweak, made by @pixelomer. Transform your phone into a peaceful meadow, where vibrant flowers bloom across your apps and graceful birds soar freely over your screen. Let nature take over your digital world, bringing a sense of tranquility and beauty to every tap and swipe.
+MobileMeadow Reborn is the successor of the original MobileMeadow tweak, made by @pixelomer. It transforms your phone into a peaceful meadow, where vibrant flowers bloom across your apps and graceful birds soar freely over your screen. Let nature take over your digital world, bringing a sense of tranquility and beauty to every tap and swipe.
 
 ## Compatibility
 Supports all iDevices with iOS >= 14.0.

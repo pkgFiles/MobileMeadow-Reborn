@@ -5,7 +5,6 @@ class MobileMeadowCreditView: UIView {
     //MARK: - Propertys
     private lazy var titleLabel: UILabel = {
         let label = UILabel().createLabelWithFontPath(text: self.username.user, fontSize: 12)
-        label.textColor = UIColor.white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -69,6 +68,7 @@ class MobileMeadowCreditView: UIView {
 
             titleLabel.topAnchor.constraint(equalTo: self.centerYAnchor, constant: -20),
             titleLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2.5),
             titleLabel.heightAnchor.constraint(equalToConstant: 20),
             
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -3),

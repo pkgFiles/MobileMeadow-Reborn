@@ -76,7 +76,7 @@ class MMGroundContainerView: UIView {
         updatePlants()
     }
     
-    //MARK: - Functions (Plants)
+    //MARK: - Functions
     private func isSpringBoardBundle() -> Bool {
         Bundle.main.bundleIdentifier == "com.apple.springboard" ? true : false
     }

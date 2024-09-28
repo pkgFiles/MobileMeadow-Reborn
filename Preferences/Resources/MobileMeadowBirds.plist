@@ -100,6 +100,18 @@
 			<key>label</key>
 			<string>Hide in Landscape</string>
 		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.pkgfiles.mobilemeadowrebornprefs</string>
+			<key>key</key>
+			<string>birdsHiddenInApplications</string>
+			<key>label</key>
+			<string>Hide in Applications</string>
+		</dict>
 	</array>
 	<key>title</key>
 	<string>Birds</string>

@@ -2,7 +2,7 @@ import Orion
 import MobileMeadowRebornC
 
 // MobileMeadow Reborn - Turn your phone into a meadow. Add flowers to your apps. Let birds fly on your screen.
-// Rewrite for modern iOS 14.0 - 16.7.5
+// Rewrite for modern iOS 14.0 - 16.7.10
 // based on original from @pixelomer: https://github.com/pixelomer/MobileMeadow
 //MARK: - Variables
 var tweakPrefs: SettingsModel = SettingsModel()

@@ -1,5 +1,14 @@
 #import <UIKit/UIKit.h>
 
+@interface FBSBundleInfo : NSObject
+@end
+
+@interface FBSApplicationInfo : FBSBundleInfo
+@end
+
+@interface _UIApplicationInfo : FBSApplicationInfo
+@end
+
 @interface SpringBoard : UIApplication
 - (BOOL)isLocked;
 - (BOOL)isShowingHomescreen;
@@ -15,4 +24,16 @@
 - (NSString *)displayName;
 - (NSString *)bundleIdentifier;
 - (id)badgeValue;
+@end
+
+@interface BBSectionInfoSettings : NSObject
+@property BOOL allowsNotifications;
+@end
+
+@interface BBSectionInfo : NSObject
+@property BBSectionInfoSettings* readableSettings;
+@end
+
+@interface BBServer : NSObject
++(NSMutableDictionary*)savedSectionInfo;
 @end

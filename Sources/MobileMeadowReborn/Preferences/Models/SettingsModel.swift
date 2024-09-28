@@ -9,6 +9,7 @@ struct SettingsModel: DictionaryConvertor, Codable {
     var birdsSpawnRate: Int = 1
     var birdsAnimationDuration: Int = 1
     var birdsHiddenInLandscape: Bool = false
+    var birdsHiddenInApplications: Bool = false
     
     // Plants
     var plantsEnabled: Bool = true

@@ -66,12 +66,15 @@ class MMAirLayerViewController: UIViewController {
     //MARK: - Functions
     @objc private func createBirdView() {
         guard let randomBirdName = birdsManager.birdImagesNames.randomElement() else { return }
-        guard let isSpringBoardLocked = (UIApplication.shared as? SpringBoard)?.isLocked() else { return }
+        guard let springBoard = (UIApplication.shared as? SpringBoard) else { return }
+        let isSpringBoardLocked: Bool = springBoard.isLocked()
+        let isShowingHomescreen: Bool = springBoard.isShowingHomescreen()
         
         setRandomTimer()
         
         if !isSpringBoardLocked {
             if tweakPrefs.birdsHiddenInLandscape && UIDevice.current.orientation.isLandscape { return }
+            if tweakPrefs.birdsHiddenInApplications && !isShowingHomescreen { return }
             remLog(randomBirdName)
             birdsManager.createRandomWindowBird(withName: randomBirdName) { _ in
                 remLog("removed bird")

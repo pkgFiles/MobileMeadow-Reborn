@@ -24,6 +24,7 @@
  
 */
 
+import Orion
 import MobileMeadowRebornC
 
 class SBApplicationManager {
@@ -48,9 +49,15 @@ class SBApplicationManager {
             guard let currentApplication = app as? SBApplication else { completion(.failure(NSError(domain: "ApplicationError", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to cast app to SBApplication"]))); return }
             guard let bundleIdentifier = currentApplication.bundleIdentifier() else { continue }
             guard let badgeValue = currentApplication.badgeValue() as? Int else { continue }
-            if let applicationName = currentApplication.displayName(), !bundleIdentifier.contains("com.apple") {
+            
+            if let applicationName = currentApplication.displayName() {
                 if let iconImage = UIImage._applicationIconImage(forBundleIdentifier: bundleIdentifier, format: 0, scale: UIScreen.main.scale) as? UIImage {
-                    result.append((iconImage, applicationName, badgeValue))
+                    if let sectionInfo: BBSectionInfo = BBServer.savedSectionInfo()[bundleIdentifier] as? BBSectionInfo {
+                        let notifSettings: BBSectionInfoSettings = sectionInfo.readableSettings
+                        if notifSettings.allowsNotifications {
+                            result.append((iconImage, applicationName, badgeValue))
+                        }
+                    }
                 }
             }
         }

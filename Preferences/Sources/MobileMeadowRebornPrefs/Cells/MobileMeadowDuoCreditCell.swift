@@ -18,8 +18,7 @@ class MobileMeadowDuoCreditCell: PSTableCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let seperatorView: UIView = UIView()
-        seperatorView.backgroundColor = UIColor.white
-        seperatorView.alpha = 0.6
+        seperatorView.backgroundColor = UIColor.gray
         seperatorView.translatesAutoresizingMaskIntoConstraints = false
         
         self.translatesAutoresizingMaskIntoConstraints = false

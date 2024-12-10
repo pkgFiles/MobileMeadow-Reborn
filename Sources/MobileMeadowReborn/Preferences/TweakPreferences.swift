@@ -59,11 +59,9 @@ class TweakPreferences {
     func loadPreferences() -> SettingsModel {
         let fileManager = FileManager()
         let plistIdentifier: String = "com.pkgfiles.mobilemeadowrebornprefs.plist"
-        var plistPath: String = "/var/mobile/Library/Preferences/" + plistIdentifier
-        
-        if !fileManager.fileExists(atPath: "/var/LIY/") && fileManager.fileExists(atPath: "/var/jb/") {
-            plistPath = "/var/jb/var/mobile/Library/Preferences/" + plistIdentifier
-        }
+        let plistPath: String = fileManager.fileExists(atPath: "/var/jb/")
+            ? "/var/jb/var/mobile/Library/Preferences/" + plistIdentifier
+            : "/var/mobile/Library/Preferences/" + plistIdentifier
         
         if let data = fileManager.contents(atPath: plistPath) {
             do {
